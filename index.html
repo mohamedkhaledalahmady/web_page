@@ -13,10 +13,10 @@
     <p style="color: white;">  
     <script>
         var date2 = new Date();
-        var month = date2.getUTCMonth();
+        var month = date2.getUTCMonth() + 1;
         var year = date2.getFullYear();
         var day = date2.getDate();
-        var fullDate = day + " / " + month + " / " + year;
+        var fullDate = day + " / " + month  + " / " + year;
         document.write("Today: " + fullDate);
         var mins = date2.getMinutes();
         var sec = date2.getSeconds();
