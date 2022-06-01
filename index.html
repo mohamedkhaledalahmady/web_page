@@ -1,0 +1,70 @@
+<!DOCTYPE html>      
+<html>      
+<head>      
+    <title>Smart Home System</title>      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+    <meta http-equiv="refresh" content="1000"> 
+    <link rel="stylesheet" href="style.css">
+    <link href="index.js">
+</head>      
+<body class="body"> 
+    <h1 class="Smart-Home">Smart Home</h1>                                     
+    <h2>LED Control</h2> 
+    <p style="color: white;">  
+    <script>
+        var date2 = new Date();
+        var month = date2.getUTCMonth();
+        var year = date2.getFullYear();
+        var day = date2.getDate();
+        var fullDate = day + " / " + month + " / " + year;
+        document.write("Today: " + fullDate);
+        var mins = date2.getMinutes();
+        var sec = date2.getSeconds();
+        var mode = date2.getHours > 12 ? "PM" : "AM";
+        var hours  = date2.getHours() <= 12 ? date2.getHours() : date2.getHours() - 12;
+        hours = hours == 0 ? 12 : hours;
+        var time = hours + " : " + mins + " : " + sec + " " + mode;
+        document.write("<br>");
+        document.write("Time: " + time);
+    </script>
+    </p>
+    Room 1       
+    <button id="13" class="button">Red</button>        
+    <button id="12" class="button">Green</button>
+    <br><br>
+    Room 2
+    <button id="11" class="button">Blue</button>          
+    <button id="10" class="button">Yellow</button>      
+    <script>       
+        $(".button").click(function () 
+        {                  
+            console.clear();                            
+            var p = $(this).attr('id');                       
+            pin: p                                                 
+            switch (p)
+            {
+                case '13':arguments
+                    console.log("RED LED " + p);
+                break;
+                case '12':arguments
+                    console.log("Green LED " + p);
+                break;
+                case '11':arguments
+                    console.log("Blue LED " + p);
+                break;
+                case '10':arguments
+                    console.log("Yellow LED " + p);
+                break;
+            }
+            // $.get("http://192.168.7.14/:80/", 
+            $.get("http://62.114.46.216/:80/",
+            // $.get("https://www.google.com/",
+            // $.get("https://jsonplaceholder.typicode.com/posts",
+            {                               
+                pin: p      
+            });      
+        });      
+    </script>
+    <script src="index.js"></script>  
+</body>      
+</html>
