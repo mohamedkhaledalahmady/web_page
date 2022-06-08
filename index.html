@@ -50,19 +50,20 @@
             pin: p
             switch (p) {
                 case '13': arguments
-                    console.log("RED LED " + p);
+                    console.log("RED LED Pin Number: " + p);
                     break;
                 case '12': arguments
-                    console.log("Green LED " + p);
+                    console.log("Green LED Pin Number: " + p);
                     break;
                 case '11': arguments
-                    console.log("Blue LED " + p);
+                    console.log("Blue LED Pin Number: " + p);
                     break;
                 case '10': arguments
-                    console.log("Yellow LED " + p);
+                    console.log("Yellow LED Pin Number: " + p);
                     break;
             }
-            $.get("http://192.168.219.14/:80/", 
+            // 192.168.1.7
+            $.get("http://192.168.1.7/:80/", 
             // $.get("http://192.168.4.1/:80/",
             // $.get("https://www.google.com/",
                 // $.get("https://www.google.com/",
