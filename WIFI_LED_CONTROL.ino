@@ -77,7 +77,6 @@ lable:
     count++;
   count++;
   *pinNumber = (data[count++] - '0') * 10 + data[count++] - '0';
-  //*pinState = data[count] - '0';
 }
 String sendData(String command, const int timeout, boolean debug)
 {
