@@ -62,12 +62,7 @@
                     console.log("Yellow LED Pin Number: " + p);
                     break;
             }
-            // 192.168.1.7
-            $.get("http://192.168.1.7/:80/", 
-            // $.get("http://192.168.4.1/:80/",
-            // $.get("https://www.google.com/",
-                // $.get("https://www.google.com/",
-                // $.get("https://jsonplaceholder.typicode.com/posts",
+            $.get("http://192.168.1.7/:80/",
                 {
                     pin: p
                 });
@@ -75,4 +70,5 @@
     </script>
     <script src="index.js"></script>
 </body>
+
 </html>
